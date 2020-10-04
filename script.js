@@ -5,13 +5,13 @@ function beautifulDaysInRange(startDay, endingDay, divisor) {
   let count = 0;
  
   for (let i = startDay; i <= endingDay; i++) {
-    //console.log(i);
-    let k = i.toString().split("").reverse().join("");
-    let l = parseInt(k);
+   
+    let stringToArray = i.toString().split("").reverse().join("");
+    let stringToNumber = parseInt(stringToArray);
 
-    let c = l - i;
-    console.log(c % divisor === 0);
-    if (c % divisor === 0) {
+    let difference = stringToNumber - i;
+   
+    if (difference % divisor === 0) {
       count++;
     }
   }
